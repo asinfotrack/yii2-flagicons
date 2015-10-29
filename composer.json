@@ -1,0 +1,35 @@
+{
+	"name": "asinfotrack/yii2-flagicons",
+	"type": "yii2-extension",
+	
+	"description": "Yii2-flagicons is Yii2-wrapper around the flag-icon-css-project",
+	"keywords": ["yii2", "flag", "icons", "vector", "widget", "bundle"],
+	
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Pascal Mueller",
+			"email": "pascal.mueller@asinfotrack.ch",
+			"homepage": "http://www.asinfotrack.ch"
+		}
+	],
+	
+	"minimum-stability": "stable",
+	"support": {
+		"source": "https://github.com/asinfotrack/yii2-flagicons",
+		"issues": "https://github.com/asinfotrack/yii2-flagicons/issues"
+	},
+	
+	"require": {
+		"php": ">=5.4.0",
+		
+		"yiisoft/yii2": "2.0.*",
+		"components/flag-icon-css": "dev-master"
+	},
+	
+	"autoload": {
+		"psr-4": {
+			"asinfotrack\\yii2\\flagicons\\": ""
+		}
+	}
+}
