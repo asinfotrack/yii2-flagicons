@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a3984eb180ddddad443724946154090f",
-    "content-hash": "93ebfeb692d284938adf63d5c2736d40",
+    "hash": "30fab315d52efbcd5cdd4f7b8b8affe7",
+    "content-hash": "6ee726f49e07d96c410ae8fcdcb3e575",
     "packages": [
         {
             "name": "bower-asset/jquery",
@@ -226,16 +226,16 @@
         },
         {
             "name": "components/flag-icon-css",
-            "version": "dev-master",
+            "version": "0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lipis/flag-icon-css.git",
-                "reference": "65cc8a9790b0808b86e28a3327621d9314048852"
+                "reference": "ee0f8d5bdfdcd75b2fe1db21e4486b18c250b227"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lipis/flag-icon-css/zipball/65cc8a9790b0808b86e28a3327621d9314048852",
-                "reference": "65cc8a9790b0808b86e28a3327621d9314048852",
+                "url": "https://api.github.com/repos/lipis/flag-icon-css/zipball/ee0f8d5bdfdcd75b2fe1db21e4486b18c250b227",
+                "reference": "ee0f8d5bdfdcd75b2fe1db21e4486b18c250b227",
                 "shasum": ""
             },
             "type": "component",
@@ -260,7 +260,7 @@
                 }
             ],
             "description": "CSS for vector based country flags",
-            "time": "2015-10-27 18:31:57"
+            "time": "2015-10-27 15:07:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -445,9 +445,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "components/flag-icon-css": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
