@@ -1,6 +1,7 @@
 <?php
 namespace asinfotrack\yii2\flagicons\implementations;
 
+use asinfotrack\yii2\flagicons\Flag;
 use asinfotrack\yii2\flagicons\widgets\FlagIcon;
 
 /**
@@ -11,8 +12,18 @@ use asinfotrack\yii2\flagicons\widgets\FlagIcon;
  * @link http://www.asinfotrack.ch
  * @license MIT
  */
-class FlagWrapper extends \yii\base\Object
+class FlagWrapper
 {
+
+	/**
+	 * @var string the mandatory country code consisting of two characters
+	 */
+	protected $countryCode;
+
+	/**
+	 * @var array options for the enclosing tag
+	 */
+	protected $options = [];
 
 	/**
 	 * @var string the tag-name to use
@@ -25,14 +36,21 @@ class FlagWrapper extends \yii\base\Object
 	protected $isSquared = false;
 
 	/**
-	 * @var string the mandatory country code consisting of two characters
+	 * @param string $cssSize any css-size like '32px', '2em', etc.
 	 */
-	public $countryCode;
+	protected $sizeCss = Flag::SIZE_DEFAULT;
 
 	/**
-	 * @var array options for the enclosing tag
+	 * The constructor for the wrapper class
+	 *
+	 * @param string $countryCode the country code consisting of two characters (eg us, de, ch)
+	 * @param array $options the html options for the tag
 	 */
-	public $options = [];
+	public function __construct($countryCode, $options=[])
+	{
+		$this->countryCode = $countryCode;
+		$this->options = $options;
+	}
 
 	/**
 	 * Sets the tag name which will be used (defaults to span)
@@ -50,11 +68,24 @@ class FlagWrapper extends \yii\base\Object
 	 * Sets whether or not to use squared flags (defaults to false)
 	 *
 	 * @param bool|true $isSquared
-	 * @return $this
+	 * @return \asinfotrack\yii2\flagicons\implementations\FlagWrapper self for chaining
 	 */
 	public function squared($isSquared=true)
 	{
 		$this->isSquared = $isSquared;
+		return $this;
+	}
+
+	/**
+	 * Sets the size of the flag. You can use any predefined constant of the Flag-class
+	 * or set a value of your choice.
+	 *
+	 * @param string $sizeCss any css-size like '32px', '2em', etc.
+	 * @return \asinfotrack\yii2\flagicons\implementations\FlagWrapper self for chaining
+	 */
+	public function size($sizeCss)
+	{
+		$this->sizeCss = $sizeCss;
 		return $this;
 	}
 
@@ -73,6 +104,7 @@ class FlagWrapper extends \yii\base\Object
 			'options'=>$this->options,
 			'tagName'=>$this->tagName,
 			'isSquared'=>$this->isSquared,
+			'sizeCss'=>$this->sizeCss,
 		]);
 	}
 

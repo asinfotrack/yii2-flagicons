@@ -4,6 +4,7 @@ namespace asinfotrack\yii2\flagicons\widgets;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
+use asinfotrack\yii2\flagicons\Flag;
 use asinfotrack\yii2\flagicons\assets\FlagIconAsset;
 
 /**
@@ -38,6 +39,11 @@ class FlagIcon extends \yii\base\Widget
 	public $isSquared = false;
 
 	/**
+	 * @param string $cssSize any css-size like '32px', '2em', etc.
+	 */
+	public $sizeCss = Flag::SIZE_DEFAULT;
+
+	/**
 	 * @inheritdoc
 	 */
 	public function init()
@@ -67,6 +73,11 @@ class FlagIcon extends \yii\base\Widget
 
 		//add actual flag class
 		Html::addCssClass($this->options, 'flag-icon-' . $this->countryCode);
+
+		//set size if defined
+		if (strcmp($this->sizeCss, Flag::SIZE_DEFAULT) !== 0) {
+			$this->addSizeToOptions();
+		}
 	}
 
 	/**
@@ -75,6 +86,23 @@ class FlagIcon extends \yii\base\Widget
 	public function run()
 	{
 		echo Html::tag($this->tagName, '', $this->options);
+	}
+
+	/**
+	 * Generates the size css and adds it to the options
+	 */
+	protected function addSizeToOptions()
+	{
+		$val = floatval($this->sizeCss);
+
+		$charPos = 0;
+		while (is_numeric($this->sizeCss[$charPos])) $charPos++;
+
+		$unit = $charPos > 0 ? substr($this->sizeCss, $charPos) : '';
+		Html::addCssStyle($this->options, [
+			'width'=>$this->isSquared ? $val . $unit : (1.33333 * $val) . $unit,
+			'line-height'=>$val . $unit,
+		]);
 	}
 
 }
