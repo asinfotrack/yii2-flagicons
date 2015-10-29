@@ -7,7 +7,8 @@ use yii\helpers\Html;
 use asinfotrack\yii2\flagicons\assets\FlagIconAsset;
 
 /**
- * Widget for displaying flag icons
+ * Widget for displaying flag icons. Use this if you want full control or if you
+ * do not want to use the static helper-class.
  *
  * @author Pascal Mueller, AS infotrack AG
  * @link http://www.asinfotrack.ch
