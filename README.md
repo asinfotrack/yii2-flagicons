@@ -1,6 +1,6 @@
 # Yii2-flagicons
-Yii2-flagicons is a Yii2-wrapper around the flag-icon-css-project. The original extension can be found
-here:
+Yii2-flagicons is a Yii2-wrapper around the flag-icon-css-project. With this extension you can easily use vector-based 
+country flags in your Yii2-project. The original extension can be found here:
 
 - [flag-icon-css-project on GitHub](https://github.com/lipis/flag-icon-css)
 - [Official demo](http://lipis.github.io/flag-icon-css/)
