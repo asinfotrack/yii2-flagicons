@@ -1,5 +1,5 @@
 # Yii2-flagicons
-Yii2-flagicons is Yii2-wrapper around the flag-icon-css-project. The original extension can be found
+Yii2-flagicons is a Yii2-wrapper around the flag-icon-css-project. The original extension can be found
 here:
 
 - [GitHub](https://github.com/lipis/flag-icon-css)

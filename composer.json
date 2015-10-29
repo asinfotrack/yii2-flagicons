@@ -2,7 +2,7 @@
 	"name": "asinfotrack/yii2-flagicons",
 	"type": "yii2-extension",
 	
-	"description": "Yii2-flagicons is Yii2-wrapper around the flag-icon-css-project",
+	"description": "Yii2-flagicons is a Yii2-wrapper around the flag-icon-css-project",
 	"keywords": ["yii2", "flag", "icons", "vector", "widget", "bundle"],
 	
 	"license": "MIT",
