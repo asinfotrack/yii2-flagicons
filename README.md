@@ -2,8 +2,8 @@
 Yii2-flagicons is a Yii2-wrapper around the flag-icon-css-project. The original extension can be found
 here:
 
-- [GitHub](https://github.com/lipis/flag-icon-css)
-- [Demo](http://lipis.github.io/flag-icon-css/)
+- [flag-icon-css-project on GitHub](https://github.com/lipis/flag-icon-css)
+- [Official demo](http://lipis.github.io/flag-icon-css/)
 
 ## Installation
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
